@@ -46,7 +46,7 @@ document.getElementById("searchInput").addEventListener("keydown", function (eve
   if (event.key === "Enter") {
       event.preventDefault();
       searchCocktails();
-      console.log('I was also clicked :)')
+      console.log('I was clicked :)')
   }
 });
 
@@ -113,7 +113,7 @@ document.addEventListener("mouseout", function (event) {
 
   if (hoverDialog) {
     hoverDialog.querySelector(".hover-dialog").style.display = "none";
-    console.log('Peace! I\'m out')
+    console.log('No longer hovering')
   }
 });
 

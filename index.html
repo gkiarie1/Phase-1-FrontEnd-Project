@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocktail Finder</title>
+  <link rel="stylesheet" href="cocktails.css">
+</head>
+<body>
+
+  <h1>Find a Cocktail</h1>
+
+  <form id="searchForm">
+    <label for="searchInput" id="openingTag">What are you looking for? </label>
+    <input type="text" id="searchInput" name="searchInput">
+    <button type="button" onclick="searchCocktails()">Search</button>
+    <button type="button" id="advancedSearchButton" onclick="openAdvancedSearchModal()">Advanced Search</button>
+  </form>
+
+<ul id="cocktailList"></ul>
+
+<div id="advancedSearchModal" class="modal">
+  <h2>Advanced Search</h2>
+  <div>
+  <label for="ingredientSearchInput">Search For An Ingredient: </label>
+  <input type="text" id="ingredientSearchInput" name="ingredientSearchInput" placeholder="Gin">
+  <button type="button" onclick="searchForIngredient();closeAdvancedSearchModal();">Search Ingredient</button>
+<div class="autocomplete-dropdown">
+<ul id="autocompleteList"></ul>
+</div>
+</div>
+
+<button type="submit" onclick="filterByAlcoholic();closeAdvancedSearchModal()">Filter Alcoholic</button>
+<button type="submit" onclick="filterByNonAlcoholic();closeAdvancedSearchModal()">Filter Non-Alcoholic</button>
+<button type="button" onclick="closeAdvancedSearchModal()">Close</button>
+</div>
+
+<script src="cocktails.js"></script>
+
+</body>
+</html>
